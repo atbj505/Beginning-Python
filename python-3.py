@@ -75,6 +75,7 @@ print 'this is a test'.replace('test', 'shit')
 #split
 print '1+2+3+4+5'.split('+')
 #如果不提供分隔符，程序会吧所有空格作为分隔符
+print '1 2345'.split()
 #strip
 string = '     internal whitespace is kept     '.strip()
 print string
