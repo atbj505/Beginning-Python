@@ -21,12 +21,12 @@ print hello('robert')
 
 def fibonacci(num):
     fib = [0 ,1]
-    for i in (num - 2):
+    for i in range(num - 2):
         fib.append(fib[i] + fib[i+1])
-print fib
-fibonacci
+    return fib
+print fibonacci(6)
 
-#纪录函数
+#纪录函数 __doc__
 def square(x):
     'Calculates the square of the number x.'
     return x*x
@@ -53,6 +53,8 @@ print name
 def change(n):
     n[0] = 'Mr.Gumby'
 names = ['Mrs.Entity', 'Mrs.Thing']
+change(names)
+print names
 
 #n 是行参的复制
 change(names[:])
@@ -300,5 +302,10 @@ seq = ['foo', 'X41', '?!', '***']
 print filter(func, seq)
 seq = ['foo', 'X41', '?!', '***']
 print [x for x in seq if x.isalnum()]
+
 #lambda 匿名函数
 print filter(lambda x: x.isalnum(), seq)
+
+#reduce
+numbers = [72, 101, 32]
+print reduce(lambda x,y:x+y,numbers)

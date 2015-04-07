@@ -31,6 +31,9 @@ print d
 d.clear()
 print d
 
+#{}与clear()的区别
+#x = {}只会使x指向一个空字典
+#x.clear()会清空x指向的内存
 x = {}
 y = x
 x['key'] = 'value'
@@ -94,6 +97,7 @@ print d
 a = {}.fromkeys(['name', 'age'])
 print a
 print dict.fromkeys(['name', 'age'])
+print dict.fromkeys(('name', 'age'))
 print dict.fromkeys(['name', 'age'],'unknown')
 
 #get

@@ -21,8 +21,8 @@ print x, y, z
 
 value = 1, 2, 3
 print value
-x , y ,z = value
-print x
+x , y , z = value
+print x, y, z
 
 scoundrel = {'name':'Robin', 'girlfriend':'Marion'}
 key, value = scoundrel.popitem()
@@ -31,7 +31,7 @@ print value
 
 #增量赋值
 fnord = 'foo'
-fnord += 'bar'
+fnord += 'bar '
 fnord *= 2
 print fnord
 
@@ -98,6 +98,7 @@ print 'al' < 'be'
 print 'FnOrD'.lower() == 'Fnord'.lower()
 print [1, 2] < [2, 1]
 print [1, 2] < [2]
+print [1, 2] < 2
 
 # and(&) or(|) not
 n = 8
@@ -120,6 +121,9 @@ else:
 #三元运算符
 print 'a' if 'b' else 'c'
 print 'a' if 0   else 'c'
+a = 10;
+b = 0;
+print 'Right' if a > b else 'wrong'
 
 #断言
 age = 10
@@ -142,6 +146,9 @@ for number in range(100):
     print number
 
 d = {'x': 1, 'y':2, 'z':3}
+print d.items()
+for lis in d.items():
+    print lis
 for key, value in d.items():
     print key,value
 
@@ -154,7 +161,7 @@ for i in range(len(names)):
 #zip
 print zip(names, ages)
 for name, age in zip(names, ages):
-    print name + age
+    print name + ' : ' + age
 
 for index, string in enumerate(names):
     if 'anne' in string:
@@ -162,6 +169,7 @@ for index, string in enumerate(names):
 print names
 #sorted reversed
 print sorted([4, 3, 6, 8, 3])
+print reversed("Hello world")
 print list(reversed('Hello world'))
 print ''.join(reversed('Hello world'))
 
@@ -178,6 +186,7 @@ while True:
     if i == 5:
         print 'i = %d' % i
         break
+
 #循环中的else
 from math import sqrt
 for n in range(99, 81, -1):
@@ -214,6 +223,9 @@ print x
 print y
 del x
 print y
+x = []
+print x
+print y
 
 #exec
 exec "print 'Hello world'"
@@ -232,5 +244,5 @@ scope = {}
 scope['x'] = 2
 scope['y'] = 3
 print eval('x * y',scope)
-exec 'x = 2' in scope
+exec 'x = 4' in scope
 print eval('x * x', scope)

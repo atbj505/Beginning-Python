@@ -14,6 +14,9 @@ from string import Template
 s = Template('$x,glorious $x!')
 print s.substitute(x = 'slurm')
 
+s = '%s,glorious %s!' % ('slurm', 'slurm')
+print s
+
 s = Template("Is's ${x}tastic")
 print s.substitute(x = 'slurm')
 

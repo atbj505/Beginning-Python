@@ -41,6 +41,7 @@ dataBase = [['albert', '1234'],
             ['smith', '7524'],
             ['jones', '9843']]
 print ['albert', '1234'] in dataBase
+print 'albert' in dataBase
 
 
 #长度 最大值 最小值
@@ -128,6 +129,7 @@ x.reverse()
 print x
 #reversed
 x = [1, 2, 3]
+print reversed(x)
 print list(reversed(x))
 #reverse方法返回一个列表
 #reversed函数返回一个迭代器对象
@@ -151,6 +153,7 @@ print y
 #.sort是直接修改元列表的排序
 x = [4, 6, 2, 1, 7, 9]
 y = sorted(x)
+print sorted(x)
 print x
 print y
 #高级排序
