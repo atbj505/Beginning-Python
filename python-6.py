@@ -53,8 +53,6 @@ print name
 def change(n):
     n[0] = 'Mr.Gumby'
 names = ['Mrs.Entity', 'Mrs.Thing']
-change(names)
-print names
 
 #n 是行参的复制
 change(names[:])
@@ -102,10 +100,14 @@ hello(greeting = 'Hello', name = 'World')
 #默认值
 def hello_1(greeting = 'Hello', name = 'World'):
     print '%s, %s' % (greeting, name)
-hello_1
+hello_1()
 hello_1(name = 'Robert')
 
-#收集函数 *参数为长度任意元组 **参数为长度任意字典
+#收集函数 *参数转换为长度任意元组 **参数转换为长度任意字典
+#当*和**出现在“行参”的时候
+#   参数应为('1', '2', '3')和(x=1, y=2, z=3)
+#当*和**出现在“实参”的时候
+#   参数应为('1', '2', '3')和{'x':1, 'y':2}
 def print_params_1(*params):
     print params
 
@@ -197,6 +199,7 @@ print story(name='Sir Robin', job='brave knight')
 params = {'job':'language', 'name':'python'}
 print story(**params)
 del params['job']
+#字典中的job参数会被前面的job指定参数覆盖
 print story(job='stroke of genius', **params)
 
 print power(2, 3)
@@ -237,7 +240,7 @@ def combine(parameter):
 external = 'berry'
 combine('straw')
 
-#globals() global
+#globals()获取全局变量字典 global 获取全局变量
 def combine(parameter):
     print parameter + globals()['parameter']
 parameter = 'berry'
@@ -295,7 +298,7 @@ print search(*params)
 print map(str, range(10))
 print [str(i) for i in range(10)]
 
-#filter 可以通过一个返回值为布尔行的函数对数据进行过滤
+#filter 可以通过一个返回值为布尔型的函数对数据进行过滤
 def func(x):
     return x.isalnum()
 seq = ['foo', 'X41', '?!', '***']
@@ -309,3 +312,4 @@ print filter(lambda x: x.isalnum(), seq)
 #reduce
 numbers = [72, 101, 32]
 print reduce(lambda x,y:x+y,numbers)
+print reduce(lambda x,y:x+y,numbers,20)
