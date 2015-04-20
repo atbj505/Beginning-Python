@@ -2,8 +2,8 @@
 # coding=utf-8
 #列表
 edward = ['Edward Gumby',42]
-john = ['John Smith',50]
 dataBase = [edward,john]
+john = ['John Smith',50]
 print dataBase
 
 
