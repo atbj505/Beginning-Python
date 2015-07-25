@@ -56,6 +56,7 @@ print repr('Hello World!')
 #Hello World!
 print str('Hello World!')
 
+print 'Hello World!'
 
 #3
 #input('Enter a number')
