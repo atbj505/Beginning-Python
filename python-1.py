@@ -31,7 +31,7 @@ print round(1.0 / 2.0)
 
 #算数模块
 import math
-#向上取整
+#向下取整
 print math.floor(32.9)
 #向上取整
 print math.ceil(32.9)

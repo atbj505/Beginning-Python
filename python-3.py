@@ -39,7 +39,7 @@ print '%.2f' % pi
 #可以用＊作为字段宽度或精度
 print '%.5s' % 'Guido van Rossum'
 print '%.*s' % (5,'Guido van Rossum')
-#符号(+)，对其(-)，0填充(0)，空白("")
+#符号(+)，对其(-)，0填充(0)，空白(" ")
 print '%+10.2f' % -pi
 print '%+10.2f' % pi
 print '%-10.2f' % pi

@@ -87,7 +87,7 @@ b = [4, 5, 6]
 a.extend(b)
 print a
 #a.extend(b) 与 a + b的区别在于
-#a.extend(b)是在b的基础上把a的元素添加进去
+#a.extend(b)是在a的基础上把b的元素添加进去
 #a + b是返回一个新的列表
 a = [1, 2, 3]
 b = [4, 5, 6]
